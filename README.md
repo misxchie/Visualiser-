@@ -1,39 +1,32 @@
-## Selected work
+# KEN.OS — Analog CRT Audio Visualizer
 
-<div align="center">
+A minimal, black-screen, green-phosphor oscilloscope that reacts to real audio.
+Bass-heavy sections drive the waveform into jagged spikes and analog-style clipping.
 
-<p align="center">
-  <img src="https://www.gitskins.com/api/section/hero?username=misxchie&theme=neon&avatar=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F244480413%3Fu%3D2e9e6fb9acb7114025ee01d376791d1d0ab0e86e%26v%3D4" alt="misxchie hero visual" />
-</p>
+## Install
 
-<p><b>Freelance developer or consultant</b></p>
+Python 3.10+ is recommended.
 
-</div>
+```bash
+python -m pip install -r requirements.txt
+```
 
-## The idea behind the work
+On Windows, if `sounddevice` cannot find an audio device, install/update your audio drivers
+and check Windows Sound settings. The app plays through your default output device.
 
-> Building useful things and learning in public.
+## Run
 
-- 👥 **1** followers · **1** following
+```bash
+python ken_os.py
+```
 
-*Small, useful work over vague claims.*
+A file picker opens. Or pass a file directly:
 
-## Case studies
+```bash
+python ken_os.py "C:\Music\my-track.mp3"
+```
 
-<table>
-<tr><td width="32%"><b><a href="https://github.com/misxchie/Birthday-cards">Birthday-cards</a></b></td><td>Birthday with html css js with a nice background with a message <br/><sub>HTML · 0 stars</sub></td></tr>
-</table>
+Supports MP3, WAV, FLAC, OGG and M4A (decoding uses bundled FFmpeg from imageio-ffmpeg).
 
-## Creative toolkit
-
-![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-
-## Make something memorable
-
-<p align="center">
-  <img src="https://www.gitskins.com/api/section/social?username=misxchie&theme=neon&avatar=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F244480413%3Fu%3D2e9e6fb9acb7114025ee01d376791d1d0ab0e86e%26v%3D4" alt="misxchie social visual" />
-</p>
-
-<a href="https://github.com/misxchie">GitHub</a>
-
-<p align="center"><sub>Mikael  · Creative portfolio generated with <a href="https://www.gitskins.com/readme-generator">GitSkins</a></sub></p>
+Press **ESC** or **Q** to quit. The visualizer is designed for local audio files; it does not
+download or stream music.
